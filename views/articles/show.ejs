@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<header>
+  <style>
+    body { background: url(https://thumbs.dreamstime.com/b/фоновое-изображение-текстуры-облака-брайна-зеленое-серое-абстрактное-128991327.jpg); }
+  </style>
+  <div class="navbar navbar-dark bg-dark shadow-sm">
+    <div class="container">
+      <a href="/" class="navbar-brand d-flex align-items-center">
+
+        <svg  width="10" height="50" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
+        stroke-width="5" aria-hidden="true" class="me-10" viewBox="0 0 24 24">
+        <path d="M23 19a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h4l2-3h6l2 3h4a2 2 0 0 1 2 2z">
+        </path><circle cx="10" cy="10" r="10"></circle></svg>
+<h1>Aftoteh</h1>
+
+      </a>
+      <nav class="nav nav-masthead justify-content-center float-md-end">
+        <a class="nav-link "  href="/"><big>Головна</big></a>
+        <a class="nav-link" href="/news"><big>Новини</big></a>
+        <a class="nav-link" href="#"><big>Контакти</big></a>
+      </nav>
+    </div>
+  </div>
+
+
+</header>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Blog</title>
+</head>
+<body>
+  <div class="container">
+    <h1 class="mb-1"><%= article.title %></h1>
+    <div class="text-muted mb-2">
+      <%= article.createdAt.toLocaleDateString() %>
+    </div>
+    <a href="/news" class="btn btn-secondary">Інші новини</a>
+
+
+    <div>
+      <%- article.sanitizedHtml %>
+    </div>
+  </div>
+</body>
+</html>
